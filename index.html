@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Piese Auto</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav>
+      <h1>Piese Auto</h1>
+      <ul>
+        <li><a href="#produse">Produse</a></li>
+        <li><a href="#cos">Coș</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button id="darkModeBtn">🌙</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Sectiunea Produse -->
+  <section id="produse">
+    <h2>Produse Disponibile</h2>
+    <div class="grid-produse">
+      <!-- 10 Produse -->
+      <div class="produs"><img src="imagini/filtru_ulei.jpg" alt="Filtru Ulei"><h3>Filtru de Ulei</h3><p>Preț: 95 RON</p><button onclick="adaugaCos('Filtru de Ulei',95)">Adaugă în Coș</button></div>
+      <div class="produs"><img src="imagini/placute_frana.jpg" alt="Plăcuțe Frână"><h3>Plăcuțe Frână</h3><p>Preț: 584 RON</p><button onclick="adaugaCos('Plăcuțe Frână',584)">Adaugă în Coș</button></div>
+      <div class="produs"><img src="imagini/baterie_auto.jpg" alt="Baterie Auto"><h3>Baterie Auto</h3><p>Preț: 1026 RON</p><button onclick="adaugaCos('Baterie Auto',1026)">Adaugă în Coș</button></div>
+      <div class="produs"><img src="imagini/bujii.jpg" alt="Bujii"><h3>Bujii</h3><p>Preț: 70 RON</p><button onclick="adaugaCos('Bujii',70)">Adaugă în Coș</button></div>
+      <div class="produs"><img src="imagini/kit_distributie.jpg" alt="Kit Distribuţie"><h3>Kit Distributie</h3><p>Preț: 2833 RON</p><button onclick="adaugaCos('Kit Distributie',2833)">Adaugă în Coș</button></div>
+      <div class="produs"><img src="imagini/amortizor.jpg" alt="Amortizor"><h3>Amortizor</h3><p>Preț: 520 RON</p><button onclick="adaugaCos('Amortizor',520)">Adaugă în Coș</button></div>
+      <div class="produs"><img src="imagini/far.jpg" alt="Far Auto"><h3>Far Auto</h3><p>Preț: 3800 RON</p><button onclick="adaugaCos('Far Auto',3800)">Adaugă în Coș</button></div>
+      <div class="produs"><img src="imagini/lampa_stop.jpg" alt="Lampă Stop"><h3>Lampă Stop</h3><p>Preț: 1400 RON</p><button onclick="adaugaCos('Lampă Stop',1400)">Adaugă în Coș</button></div>
+      <div class="produs"><img src="imagini/radiator.jpg" alt="Radiator"><h3>Radiator</h3><p>Preț: 855 RON</p><button onclick="adaugaCos('Radiator',855)">Adaugă în Coș</button></div>
+      <div class="produs"><img src="imagini/ulei_motor.jpg" alt="Ulei Motor"><h3>Ulei Motor</h3><p>Preț: 90 RON</p><button onclick="adaugaCos('Ulei Motor',90)">Adaugă în Coș</button></div>
+    </div>
+  </section>
+
+  <!-- Sectiunea Cos -->
+  <section id="cos">
+    <h2>Coș de Cumpărături</h2>
+    <ul id="listaCos"></ul>
+    <p id="total"></p>
+    <button onclick="golesteCos()">Golește Coșul</button>
+  </section>
+
+  <!-- Sectiunea Contact -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <form>
+      <input type="text" name="nume" placeholder="Nume" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="mesaj" placeholder="Mesaj" required></textarea>
+      <button type="submit">Trimite</button>
+    </form>
+
+    <!-- Date de contact magazin -->
+  <div class="date-contact">
+    <p><strong>Adresă:</strong> Strada Frederic Chopin 9, București</p>
+    <p><strong>Telefon:</strong> <a href="tel:+40768190711">+40768190711</a></p>
+    <p><strong>Email:</strong> <a href="mailto:contact@pieseauto.ro">contact@pieseauto.ro</a></p>
+  </div>
+
+  <!-- Hartă Google Maps -->
+  <div class="harta">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2849.1234567890123!2d26.102345678!3d44.432123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff0000000000%3A0xabcdef1234567890!2sStrada+Exemplu+123%2C+Bucure%C8%99ti!5e0!3m2!1sro!2sro!4v1690000000000!5m2!1sro!2sro" 
+      width="100%" 
+      height="250" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+  </section>
+
+  <!-- Footer -->
+ <footer>
+  <p>&copy; 2025 Piese Auto - Toate drepturile rezervate</p>
+  <p>
+    Adresă: Strada Frederich Chopin 9, București | 
+    Telefon: <a href="tel:+40768190711">+40768190711</a> | 
+    Email: <a href="mailto:contact@pieseauto.ro">contact@pieseauto.ro</a>
+  </p>
+</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
